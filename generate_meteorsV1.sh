@@ -1,6 +1,6 @@
 #!/bin-7bash
 for i in {1..999}; do
-  printf "meteor_$i.txt"
+  printf "meteor_$(printf "%03d" "$i").txt"
 done
 
 random_date() {
@@ -24,7 +24,7 @@ final_fecha="2025-12-25"
 
 for i in {1..999}; do
   fecha=$(random_date "$inicio_fecha" "$final_fecha")
-  printf "$fecha" > "meteor_$i.txt"
+  printf "$fecha" > "meteor_$(printf "%03d" "$i").txt"
 done
 
 inicio_fecha_hora="2025-12-24 22:00:00"

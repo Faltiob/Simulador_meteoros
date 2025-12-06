@@ -23,7 +23,7 @@ for i in $(seq 1 "$cantidad"); do
   duracion_seg=$(awk -v seed="$RANDOM" 'BEGIN{srand(seed); printf("%.2f", 0.1 + rand()*4.9)}')
   altura_grados=$(awk -v seed="$RANDOM" 'BEGIN{srand(seed); printf("%.2f", 10.0 + rand()*90.0)}')
   acimut_grados=$(awk -v seed="$RANDOM" 'BEGIN{srand(seed); printf("%.2f", 0.0 + rand()*359.0)}')
-printf "%s, %s, %s, %s, %s\n" "$fecha" "$hora" "$duracion_seg" "$altura_grados" "$acimut_grados" > "meteor_$i.txt"
+printf "%s, %s, %s, %s, %s\n" "$fecha" "$hora" "$duracion_seg" "$altura_grados" "$acimut_grados" > "meteor_$(printf "%03d" "$i").txt"
 done
 
 
