@@ -1,0 +1,2 @@
+Cantidad de meteoros: 901
+Tiempo promedio entre meteoros (en segundos): 36.3489
